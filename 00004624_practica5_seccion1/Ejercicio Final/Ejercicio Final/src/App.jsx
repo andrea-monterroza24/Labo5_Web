@@ -1,0 +1,25 @@
+import CardScientist from './Components/CardScientist'
+import { scientists } from './Data/scientists'
+
+
+function App() {
+
+  return (
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+      <h1>Cientificos Notables</h1>
+      {scientists.map((scientist) => (
+        <CardScientist
+          key={scientist.id}
+          name={scientist.name}
+          image={scientist.image}
+          profession={scientist.profession}
+          awards={scientist.awards}
+          discorveries={scientist.discoveries}
+        />
+      ))}
+
+    </div>
+  )
+}
+
+export default App
